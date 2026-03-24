@@ -3,7 +3,7 @@ from pathlib import Path
 from dotenv import dotenv_values
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-ENV = dotenv_values(os.path.join(BASE_DIR, '.env'))
+ENV = dotenv_values(os.path.join(BASE_DIR, '.env.shablon'))
 
 SECRET_KEY = ENV['SECRET_KEY']
 DEBUG = ENV['DEBUG']
