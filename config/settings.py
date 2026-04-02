@@ -9,8 +9,7 @@ SECRET_KEY = ENV['SECRET_KEY']
 DEBUG = ENV['DEBUG']
 
 ALLOWED_HOSTS = ENV.get('ALLOWED_HOSTS', '').split(',')
-
-
+CSRF_TRUSTED_ORIGINS = ENV.get('CSRF_TRUSTED_ORIGINS', '').split(',')
 INSTALLED_APPS = [
     'jazzmin',
     'django.contrib.admin',
@@ -79,10 +78,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-CSRF_TRUSTED_ORIGINS = [
-    "https://*.ngrok-free.app",
-    "https://*.ngrok.io",
-]
+
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Internationalization
